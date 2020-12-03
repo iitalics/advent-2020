@@ -2,10 +2,10 @@ CC ?= gcc
 CURL ?= curl
 CFLAGS = --std=c89
 
-DAYS = 1
+DAYS = 1 2 3
 
 all: $(DAYS:%=day%)
-	@$(DAYS:%=d=%;echo -n "Day $$d: ";./run.sh $$d)
+	@$(DAYS:%=d=%;echo -n "Day $$d: ";./run.sh $$d;)
 
 clean:
 	rm -f $(shell find . -type f -name 'day?' -or -name '.output*')
