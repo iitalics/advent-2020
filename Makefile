@@ -8,4 +8,4 @@ all: $(DAYS:%=day%)
 	@$(DAYS:%=d=%;echo -n "Day $$d: ";./run.sh $$d)
 
 clean:
-	rm -f $(shell find . -type f -name 'day?' -or -name '.input*')
+	rm -f $(shell find . -type f -name 'day?' -or -name '.output*')
